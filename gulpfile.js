@@ -4,7 +4,9 @@ const connect = require('gulp-connect');
 
 gulp.task('styles', function() {
   return gulp.src(['./sass/**/*.scss'])
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
     .pipe(gulp.dest('./assets/css'))
 });
 

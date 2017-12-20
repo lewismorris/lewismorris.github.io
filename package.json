@@ -4,7 +4,7 @@
   "description": "lewismorris.github.io",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/.bin/gulp build"
   },
   "author": "Lewis Morris <lewis@lewismorris.co.uk>",
   "license": "ISC",

@@ -1,41 +1,33 @@
-<!doctype html>
+---
+title: Lewis Morris - Fron End Developer
+---
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Lewis Morris - Front End Developr &amp; Guitarist</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <title>{{title}}</title>
   </head>
   <body>
-    <header class="spacing-bottom-whole text-center">
-        <img class="profile-pic spacing-bottom-third" src="/assets/images/me.png" alt="Lewis Morris" title="Lewis Morris" />
-        <h1 class="heading-alpha">Lewis Morris</h1>
-        <h2 class="heading-bravo spacing-bottom-third">Front End Developer &amp; Guitarist</h2>
-        <p class="location">
-          <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.95 71.97" height="20">
-            <path d="M20.33,0h-.72A19.68,19.68,0,0,0,0,19.62C0,30.34,20,72,20,72S40,30.3,40,19.62A19.72,19.72,0,0,0,20.33,0Zm-.4,26.87a9,9,0,1,1,9-9A9,9,0,0,1,19.93,26.87Z"/>
-          </svg>
-          Middlesbrough, United Kingdom
-        </p>
+    <header>
+      <h1>Lewis Morris</h1>
+      <h2>Front End Developer</h2>
     </header>
-    <section class="text-center">
-      <ul class="list list-social">
-        <li class="list-social__item">
-          <a class="twitter" href="//twitter.com/lewimorris">Twitter</a>
-        </li>
-        <li class="list-social__item">
-          <a class="linkedin" href="//linkedin.com/in/lewis-morris-084508136/">LinkedIn</a>
-        </li>
-        <li class="list-social__item">
-          <a class="github" href="//github.com/lewismorris">Github</a>
-        </li>
-        <li class="list-social__item">
-          <a class="instagram" href="//instagram.com/lewismorris93">Instagram</a>
-        </li>
-        <li class="list-social__item">
-          <a class="soundcloud" href="//soundcloud.com/lewismorris">Soundcloud</a>
-        </li>
-      </ul>
-    </section>
+    <main>
+      {% for article in articles %}
+      <article>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <h3>{{article.title}}</h3>
+          <p>{{article.description}}</p>
+          <time>{{article.published_timestamp}}</time>
+        </a>
+      </article>
+      {% endfor %}
+    </main>
+    <footer>
+      Twitter, Github, Linkedin &copy; Lewis Morris 2020
+    </footer>
   </body>
 </html>
